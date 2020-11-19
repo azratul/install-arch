@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/America/Santiago /etc/localtime
 hwclock --systohc
-pacman -S vim intel-ucode efibootmgr grub netctl iw dhcpcd lightdm lightdm-gtk-greeter xorg-server xorg-xinit xorg-xinput xorg-xhost sudo udisks2 mtpfs gvfs-mtp gvfs-gphoto2 git openssh base-devel jq htop nmap nbtscan ettercap tcpdump jp2a imagemagick xdg-utils sxiv entr nitrogen xclip groff zathura zathura-pdf-mupdf zathura-ps zathura-cb zathura-djvu notify-osd libnotify picom dmenu neofetch bspwm sxhkd alacritty
+pacman -S vim intel-ucode efibootmgr grub netctl iw dhcpcd lightdm lightdm-gtk-greeter xorg-server xorg-xinit xorg-xinput xorg-xhost sudo udisks2 mtpfs gvfs-mtp gvfs-gphoto2 git openssh base-devel jq htop nmap nbtscan ettercap tcpdump jp2a imagemagick xdg-utils sxiv entr nitrogen xclip groff zathura zathura-pdf-mupdf zathura-ps zathura-cb zathura-djvu notify-osd libnotify picom dmenu neofetch bspwm sxhkd alacritty stow #xf86-video-nouveau
 sed 's/#es_CL.UTF-8/es_CL.UTF-8/g' /etc/locale.gen
 locale-gen
 echo 'LANG=es_CL.UTF-8' > /etc/locale.conf
