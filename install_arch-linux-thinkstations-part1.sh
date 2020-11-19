@@ -1,11 +1,10 @@
 #!/bin/sh
 
-dhcpcd enp0s29u1u3
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mkfs.ext4 /dev/sda3
-mkfs.ext4 /dev/sda4
 mkdir -p /mnt/boot/efi /mnt/home
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 -F /dev/sda2
+mkfs.ext4 -F /dev/sda3
+mkfs.ext4 -F /dev/sda4
 mount /dev/sda2 /mnt
 mount /dev/sda1 /mnt/boot/efi
 mount /dev/sda4 /mnt/home
