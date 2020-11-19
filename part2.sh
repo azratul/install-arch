@@ -17,5 +17,6 @@ echo "Password Clepin"
 passwd clepin
 echo "Password root"
 passwd
+EDITOR=vim visudo
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #su - clepin
