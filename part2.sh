@@ -13,12 +13,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable lightdm
 echo -e "sxhdc &\nexec bspwm" > ~/.xinitrc
 useradd -m -g users -G wheel -s /bin/bash clepin
+echo "Password Clepin"
 passwd clepin
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-su - clepin
-git clone https://aur.archlinux.org/yay.git
-cd ./yay/
-makepkg -si
-cd ..
-rm -rf yay/
-yay -S nvidia-340xx nvidia-340xx-utils polybar
+echo "Password root"
+passwd
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#su - clepin
