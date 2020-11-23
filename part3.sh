@@ -6,4 +6,11 @@ cd ./yay/
 makepkg -si
 cd ..
 rm -rf yay/
-yay -S nvidia-340xx nvidia-340xx-utils polybar
+yay -S tdrop polybar
+echo "setxkbmap -layout latam -variant deadtilde" > .xprofile
+sudo pacman -S firefox-developer-edition kubectl mplayer docker blender gimp inkscape
+git clone https://github.com/azratul/dotfiles
+mv dotfiles .dotfiles
+cd .dotfiles
+stow --adopt home
+stow --adopt fonts
