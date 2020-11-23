@@ -1,0 +1,7 @@
+## Chile
+Server = http://mirror.anquan.cl/archlinux/$repo/os/$arch
+Server = http://mirror.archlinux.cl/$repo/os/$arch
+Server = http://mirror1.cl.netactuate.com/archlinux/$repo/os/$arch
+Server = https://mirror1.cl.netactuate.com/archlinux/$repo/os/$arch
+Server = http://mirror.ufro.cl/archlinux/$repo/os/$arch
+Server = https://mirror.ufro.cl/archlinux/$repo/os/$arch
