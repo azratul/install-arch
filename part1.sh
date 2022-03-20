@@ -1,12 +1,12 @@
 #!/bin/sh
 
 loadkeys es
-pacman -Syu
 ln -sf /usr/share/zoneinfo/America/Santiago /etc/localtime
 # Replace with sed
 nvim /etc/pacman.conf
 pacman-key --init
 pacman-key --populate archlinuxarm
+pacman -Syu
 pacman -S neovim alacritty lightdm lightdm-gtk-greeter xorg-server xorg-xinit xorg-xinput xorg-xhost xorg-xev rsync sudo udisks2 usbutils mtpfs gvfs-mtp gvfs-gphoto2 git openssh base-devel jq htop nmap nbtscan ettercap tcpdump jp2a imagemagick xdg-utils sxiv entr nitrogen xclip groff zathura zathura-pdf-mupdf zathura-ps zathura-cb zathura-djvu notify-osd libnotify picom dmenu neofetch bspwm sxhkd stow xf86-video-fbdev xorg-xrefresh dialog bash-completion bluez pulseaudio pulseaudio-alsa pulseaudio-bluetooth alsa-utils lsd bat bc ntp wpa_supplicant
 sed -i 's/#es_CL.UTF-8/es_CL.UTF-8/g' /etc/locale.gen
 locale-gen
@@ -19,21 +19,21 @@ passwd clepin
 EDITOR=nvim visudo
 passwd
 # Replace with sed
-nvim /etc/ssh/sshd_config 
+nvim /etc/ssh/sshd_config
 echo 'setxkbmap -layout latam -variant deadtilde' > /home/clepin/.xprofile
 mkdir /home/clepin/.config/bspwm /home/clepin/.config/sxhkd /home/clepin/Apps/Database
 cp /usr/share/doc/bspwm/examples/bspwmrc /home/clepin/.config/bspwm
 cp /usr/share/doc/bspwm/examples/sxhkdrc /home/clepin/.config/sxhkd
 chown clepin:users -R /home/clepin/.config
 chown clepin:users -R /home/clepin/.xprofile
-wifi-menu 
-netctl start wlan0-Andromeda-5G 
-netctl enable wlan0-Andromeda-5G 
+wifi-menu
+netctl start wlan0-Andromeda-5G
+netctl enable wlan0-Andromeda-5G
 pacman -S pavucontrol thunar oath-toolkit zbar ranger iftop cfitsio xdotool
 systemctl enable bluetooth.service
 systemctl start bluetooth.service
 systemctl enable brcm43438.service
-userdel alarm 
+userdel alarm
 ntpd -qg
 systemctl enable ntpd
 systemctl start ntpd

@@ -11,4 +11,11 @@ bsdtar -xpf ArchLinuxARM-rpi-aarch64-latest.tar.gz -C root
 sync
 sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab
 mv root/boot/* boot
+# START ONLY FOR RPI-400
+sed -i 's/\{fdt_addr_r\};/\{fdt_addr\};/g' boot/boot.txt
+cd boot
+pacman -S uboot-tools
+mkimage -A arm -T script -O linux -d boot.txt boot.scr
+# END - ONLY FOR RPI-400
 umount root boot
+
