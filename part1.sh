@@ -21,22 +21,19 @@ passwd
 # Replace with sed
 nvim /etc/ssh/sshd_config
 echo 'setxkbmap -layout latam -variant deadtilde' > /home/clepin/.xprofile
-mkdir /home/clepin/.config/bspwm /home/clepin/.config/sxhkd /home/clepin/Apps/Database
+mkdir -p /home/clepin/.config/bspwm /home/clepin/.config/sxhkd /home/clepin/Apps/Database
 cp /usr/share/doc/bspwm/examples/bspwmrc /home/clepin/.config/bspwm
 cp /usr/share/doc/bspwm/examples/sxhkdrc /home/clepin/.config/sxhkd
 chown clepin:users -R /home/clepin/.config
 chown clepin:users -R /home/clepin/.xprofile
 wifi-menu
-netctl start wlan0-Andromeda-5G
-netctl enable wlan0-Andromeda-5G
+netctl enable --now wlan0-Andromeda-5G
 pacman -S pavucontrol thunar oath-toolkit zbar ranger iftop cfitsio xdotool
-systemctl enable bluetooth.service
-systemctl start bluetooth.service
-systemctl enable brcm43438.service
+systemctl enable --now bluetooth.service
+systemctl enable --now brcm43438.service
 userdel alarm
 ntpd -qg
-systemctl enable ntpd
-systemctl start ntpd
+systemctl enable --now ntpd
 
 su - clepin
 git clone https://aur.archlinux.org/yay.git
