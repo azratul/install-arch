@@ -41,7 +41,7 @@ cd ./yay/
 makepkg -si
 cd ..
 rm -rf yay
-yay -S x2x lightdm-webkit-theme-aether tdrop kubectl-bin polybar pi-bluetooth ttf-fira-code ttf-inconsolata ttf-iosevka ttf-inconsolata
+yay -S x2x lightdm-webkit-theme-aether tdrop kubectl-bin polybar pi-bluetooth ttf-fira-code ttf-inconsolata ttf-iosevka
 sudo pacman -S firefox bashtop openconnect docker blueman mplayer jdk-openjdk cmatrix helm
 sudo usermod -aG docker clepin
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
