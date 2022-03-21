@@ -12,10 +12,9 @@ sync
 sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab
 mv root/boot/* boot
 # START ONLY FOR RPI-400
-sed -i 's/\{fdt_addr_r\};/\{fdt_addr\};/g' boot/boot.txt
-cd boot
+sed -i 's/{fdt_addr_r};/{fdt_addr};/g' boot/boot.txt
 pacman -S uboot-tools
-mkimage -A arm -T script -O linux -d boot.txt boot.scr
+mkimage -A arm -T script -O linux -d boot/boot.txt boot/boot.scr
 # END - ONLY FOR RPI-400
 umount root boot
 
