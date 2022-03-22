@@ -1,4 +1,4 @@
 # install-arch
-linux-aarch64
-mkinitcpio
+
+# Don't update this package
 raspberry-bootloader
