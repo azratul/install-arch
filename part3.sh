@@ -6,7 +6,7 @@ cd ./yay/
 makepkg -si
 cd ..
 rm -rf yay/
-sudo pacman -S firefox-developer-edition kubectl mplayer docker blender gimp inkscape dolphin ttf-fira-code noto-fonts-cjk otf-font-awesome ttf-liberation nodejs npm
+sudo pacman -S firefox-developer-edition kubectl mplayer docker blender gimp inkscape dolphin ttf-fira-code noto-fonts-cjk otf-font-awesome ttf-liberation nodejs npm slurp grim swappy
 yay -S gotop wlr-randr neofetch qownnotes it87-dkms-git
 sudo modprobe it87 force_id=0x8686
 # APPEND TO /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT="acpi_enforce_resources=lax"
