@@ -6,7 +6,7 @@ cd ./yay/
 makepkg -si
 cd ..
 rm -rf yay/
-sudo pacman -S firefox-developer-edition kubectl mplayer docker blender gimp inkscape dolphin ttf-fira-code ttf-font-awesome nerd-fonts tdrop zoxide wlogout xdg-desktop-portal xdg-desktop-portal-gtk neovim noto-fonts-cjk otf-font-awesome nodejs npm yadm
+sudo pacman -S firefox-developer-edition kubectl mplayer docker blender gimp inkscape nemo ttf-fira-code ttf-font-awesome nerd-fonts tdrop zoxide wlogout xdg-desktop-portal xdg-desktop-portal-gtk neovim noto-fonts-cjk otf-font-awesome nodejs npm yadm grim swappy slurp
 yay -S gotop wlr-randr neofetch
 
 # Steam
